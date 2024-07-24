@@ -22,7 +22,7 @@ public class PlayerInteract : MonoBehaviour
     // Update is called once per frame
     void update()
     {
-
+        //FIXME: ray is not being drawn from player view position, might be an issue with script or action within the engine needs to be changed
         //clears text when not looking at anything.
         playerUI.UpdateText(string.Empty);
 
