@@ -10,12 +10,13 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField]
     private LayerMask mask;
     private PlayerUI playerUI;
+    private InputManager inputManager;
 
     void Start()
     {
         cam = GetComponent<PlayerLook>().cam;
         playerUI = GetComponent<PlayerUI>();
-        inputManager = GetComponent<inputManager>();
+        inputManager = GetComponent<InputManager>();
     }
 
     // Update is called once per frame
@@ -35,7 +36,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
                 playerUI.UpdateText(interactable.promptMessage);
-                if (inputManager.OnFoot.Interact.triggered)
+                if (inputManager.onFoot.Interact.triggered)
                 {
                     interactable.BaseInteract();
                 }

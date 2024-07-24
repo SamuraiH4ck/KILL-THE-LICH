@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Keypad : Interactable
 {
+    [SerializeField]
+    private GameObject dor;
+    private bool doorOpen;
     // Start is called before the first frame update
     void Start()
     {
