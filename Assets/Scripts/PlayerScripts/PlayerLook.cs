@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// this file now isnt being loaded as it may interfere with in place PlayerMotor
+
 public class PlayerLook : MonoBehaviour
 {
     public Camera cam;
